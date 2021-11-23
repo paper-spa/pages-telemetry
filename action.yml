@@ -1,0 +1,10 @@
+name: 'Emit metric for GitHub Pages build'
+description: 'A GitHub Action to emit pages build metric'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+inputs:
+  token:
+    description: 'GitHub token'
+    default: ${{ github.token }}
+    required: true
